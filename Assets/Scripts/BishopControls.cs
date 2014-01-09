@@ -4,6 +4,8 @@ using System.Collections;
 public class BishopControls : MonoBehaviour 
 	
 {
+
+	//ALEX IS A SLUT
 	public float JumpForce = 300f;
 	public float MaxSpeed = 3f;
 	public float MoveForce = 20f;
