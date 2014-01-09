@@ -66,7 +66,7 @@ public class BishopControls : MonoBehaviour
 		else if (h < 0 && facingRight)
 			Flip ();
 	}
-
+	// sam is a buttpirate
 	void Flip ()
 	{
 		// Switch the way the player is labelled as facing.
