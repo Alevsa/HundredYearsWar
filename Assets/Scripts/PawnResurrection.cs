@@ -33,7 +33,7 @@ public class PawnResurrection : MonoBehaviour
 		if((bishopTop || bishopBottom) && Input.GetButtonDown("Fire1") && PawnHealth == 0f)
 			Resurrect ();
 	}
-
+	// fags
 	void Resurrect()
 	{
 		PawnHealth = 100f;
