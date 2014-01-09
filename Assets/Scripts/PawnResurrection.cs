@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+//cyka
 public class PawnResurrection : MonoBehaviour
 {
 	public float PawnHealth = 0f;
