@@ -5,7 +5,7 @@ public class FrogSpawner : MonoBehaviour
 {
 	public float spawnTime = 50f;		// The amount of time between each spawn.
 	public float spawnDelay = 20f;		// The amount of time before spawning starts.
-	public GameObject[] frogs;		// Array of enemy prefabs.	
+	public GameObject frog;			
 	
 	void Start ()
 	{
@@ -15,9 +15,7 @@ public class FrogSpawner : MonoBehaviour
 
 	void Spawn ()
 	{
-		// Instantiate a random enemy.
-		int enemyIndex = Random.Range(0, frogs.Length);
-		Instantiate(frogs[enemyIndex], transform.position, transform.rotation);
+		Instantiate(frog, transform.position, transform.rotation);
 	}
 
 }

@@ -12,6 +12,8 @@ public class PawnResurrection : MonoBehaviour
 	private Transform bishopCheckBottom;
 
 	private Transform resurrectLoc;
+	private GameObject resBar = null;
+	public GameObject ResurrectPrefab;
 
 	// Use this for initialization
 	void Start () 
@@ -21,7 +23,6 @@ public class PawnResurrection : MonoBehaviour
 		resurrectLoc = transform.Find ("resurrectLoc");
 	}
 
-	// Update is called once per frame
 	void Update () 
 	{
 		bishopTop = Physics2D.Linecast(transform.position, bishopCheckTop.position, 1 << LayerMask.NameToLayer ("Player"));
@@ -30,8 +31,13 @@ public class PawnResurrection : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		if((bishopTop || bishopBottom) && Input.GetButtonDown("Fire1") && PawnHealth == 0f)
-			Resurrect ();
+	    if ((bishopTop || bishopBottom) && Input.GetButton ("Fire1") && PawnHealth == 0f) 
+		{
+		Object cloneResurrect = Instantiate (ResurrectPrefab, resurrectLoc.position, resurrectLoc.rotation);
+		resBar = GameObject.Find ("resBar");	
+		Resurrect ();	
+	    }
+
 	}
 
 	void Resurrect()

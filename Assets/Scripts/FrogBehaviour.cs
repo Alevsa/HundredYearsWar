@@ -3,11 +3,10 @@ using System.Collections;
 
 public class FrogBehaviour : MonoBehaviour 
 {
+	public float direction;
 	public float moveForce = 20f;
 	public float maxSpeed = 4f;
-
-
-	// Use this for initialization
+	
 	void Start () 
 	{
 	
@@ -17,7 +16,7 @@ public class FrogBehaviour : MonoBehaviour
 	void FixedUpdate () 
 	{
 		if(rigidbody2D.velocity.x < maxSpeed)
-			rigidbody2D.AddForce(Vector2.right * moveForce);
+			rigidbody2D.AddForce(Vector2.right * direction * moveForce);
 
 		if(Mathf.Abs(rigidbody2D.velocity.x) > maxSpeed)
 			rigidbody2D.velocity = new Vector2(Mathf.Sign(rigidbody2D.velocity.x) * maxSpeed, rigidbody2D.velocity.y);
