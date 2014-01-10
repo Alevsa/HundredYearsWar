@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PawnHealth: 0
+  resurrectTime: 5
   ResurrectPrefab: {fileID: 100002, guid: fcb7f551bad726f45817a74532a4d27e, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
