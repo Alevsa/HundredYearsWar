@@ -79,7 +79,6 @@ public class PawnResurrection : MonoBehaviour
 
 		if((!bishopTop && !bishopBottom) || !Input.GetButton("Fire1"))
 		{
-			resurrectTime = 5f;
 			resurrecting = false;
 			Destroy (cloneResurrect);
 		}
@@ -93,13 +92,13 @@ public class PawnResurrection : MonoBehaviour
 		{
 			carried = false;
 			transform.Rotate (new Vector3(0, 0, -90));
+			//transform.position = new Vector3 (player.transform.position.x - player.transform.lossyScale.x / 2, player.transform.position.y);
 		}
 
 	}
 
 	void Resurrect()
 	{
-		resurrectTime = 5f;
 		pawnAlive = true;
 		resurrecting = false;
 		Destroy (cloneResurrect);
