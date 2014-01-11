@@ -1471,7 +1471,7 @@ GameObject:
   m_Layer: 0
   m_Name: resurrectLoc
   m_TagString: Untagged
-  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3785,6 +3785,10 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5800000, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
   m_RootGameObject: {fileID: 843819019}
@@ -3801,7 +3805,7 @@ GameObject:
   m_Layer: 0
   m_Name: bishopCheckBottom
   m_TagString: Untagged
-  m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4947,7 +4951,7 @@ GameObject:
   m_Layer: 0
   m_Name: bishopCheckTop
   m_TagString: Untagged
-  m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5229,7 +5233,7 @@ GameObject:
   m_Layer: 0
   m_Name: resurrectLoc
   m_TagString: Untagged
-  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5367,7 +5371,7 @@ GameObject:
   m_Layer: 0
   m_Name: bishopCheckBottom
   m_TagString: Untagged
-  m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -7681,7 +7685,7 @@ GameObject:
   m_Layer: 0
   m_Name: bishopCheckBottom
   m_TagString: Untagged
-  m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -7983,7 +7987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PawnHealth: 0
-  resurrectTime: 5
+  resurrectTime: 3
   ResurrectPrefab: {fileID: 100002, guid: fcb7f551bad726f45817a74532a4d27e, type: 2}
 --- !u!1001 &680702619
 Prefab:
@@ -8556,7 +8560,7 @@ GameObject:
   m_Layer: 0
   m_Name: bishopCheckTop
   m_TagString: Untagged
-  m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -8682,7 +8686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PawnHealth: 0
-  resurrectTime: 5
+  resurrectTime: 3
   ResurrectPrefab: {fileID: 100002, guid: fcb7f551bad726f45817a74532a4d27e, type: 2}
 --- !u!1 &717682632
 GameObject:
@@ -8695,7 +8699,7 @@ GameObject:
   m_Layer: 0
   m_Name: bishopCheckBottom
   m_TagString: Untagged
-  m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -11200,7 +11204,7 @@ GameObject:
   m_Layer: 0
   m_Name: resurrectLoc
   m_TagString: Untagged
-  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -12215,7 +12219,7 @@ GameObject:
   m_Layer: 0
   m_Name: bishopCheckTop
   m_TagString: Untagged
-  m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -12517,7 +12521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PawnHealth: 0
-  resurrectTime: 5
+  resurrectTime: 3
   ResurrectPrefab: {fileID: 100002, guid: fcb7f551bad726f45817a74532a4d27e, type: 2}
 --- !u!1001 &1092113681
 Prefab:
@@ -13122,6 +13126,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1.80969572
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: resurrectTime
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c667e153c19648340924780653c28131, type: 2}
   m_RootGameObject: {fileID: 1078112203}
@@ -13513,6 +13521,10 @@ Prefab:
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalRotation.w
       value: .707106829
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: resurrectTime
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c667e153c19648340924780653c28131, type: 2}
@@ -14894,6 +14906,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: .707106829
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: resurrectTime
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c667e153c19648340924780653c28131, type: 2}
   m_RootGameObject: {fileID: 1968457975}
@@ -16137,6 +16153,10 @@ Prefab:
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalRotation.w
       value: .707106829
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: resurrectTime
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c667e153c19648340924780653c28131, type: 2}
@@ -22632,7 +22652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PawnHealth: 0
-  resurrectTime: 5
+  resurrectTime: 3
   ResurrectPrefab: {fileID: 100002, guid: fcb7f551bad726f45817a74532a4d27e, type: 2}
 --- !u!1001 &1974631276
 Prefab:
@@ -22757,7 +22777,7 @@ GameObject:
   m_Layer: 0
   m_Name: resurrectLoc
   m_TagString: Untagged
-  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -24527,7 +24547,7 @@ GameObject:
   m_Layer: 0
   m_Name: bishopCheckTop
   m_TagString: Untagged
-  m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
