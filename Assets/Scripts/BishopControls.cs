@@ -31,19 +31,19 @@ public class BishopControls : MonoBehaviour
 		//If the player is "grounded" and presses the Unity preset Jump input (spacebar or Y on controller) the jump boolean is set to true and so the If statement...
 		// In the FixedUpdate method runs.
 		if (Input.GetButtonDown ("Jump") && grounded)
-			jump = true;
-	
+			jump = true;	
 	}
 	// FixedUpdate is called every physics step. FixedUpdate intervals are consistent. Used for regular updates such as : adjusting physics of rigidbody objects.
 	void FixedUpdate () 
 	{
 		//Controls for players movement.
 		//Sets h to +/- 1 depending on which way the player presses on either a controller joystick or w, a, left/right arrow, which are preset into Unity under "Horizontal" Input.
-		float h = Input.GetAxis ("Horizontal");
+		float h = Input.GetAxisRaw ("Horizontal");
 
 		//If his velocity in a certain direction is less than his max speed, he can move that way.
 		if (h * rigidbody2D.velocity.x < MaxSpeed) 
 			rigidbody2D.AddForce (Vector2.right * h * MoveForce);
+
 
 		//If his velocity is greater than his maxspeed, his velocity is set back to his max speed.
 		if (Mathf.Abs(rigidbody2D.velocity.x) > MaxSpeed)

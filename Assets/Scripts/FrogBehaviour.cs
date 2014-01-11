@@ -4,8 +4,8 @@ using System.Collections;
 public class FrogBehaviour : MonoBehaviour 
 {
 	public float direction;
-	public float moveForce = 20f;
-	public float maxSpeed = 4f;
+	public float moveForce = 100f;
+	public float maxSpeed = 2f;
 	
 	void Start () 
 	{

@@ -20,6 +20,11 @@ public class PawnResurrection : MonoBehaviour
 	private Transform resurrectLoc;
 	public GameObject ResurrectPrefab;
 	private GameObject cloneResurrect;
+	private GameObject player;
+
+	private bool carried = false;
+	private int noCollisionLayer;
+	private int oldLayer;
 
 	// Use this for initialization
 	void Start () 
@@ -27,13 +32,36 @@ public class PawnResurrection : MonoBehaviour
 		bishopCheckTop = transform.Find ("bishopCheckTop");
 		bishopCheckBottom = transform.Find ("bishopCheckBottom");
 		resurrectLoc = transform.Find ("resurrectLoc");
+		oldLayer = gameObject.layer;
+		player = GameObject.Find ("Bishop");
+		//noCollisionLayer = 1 << LayerMask.NameToLayer ("NoCollision");
 	}
 
-	void Update () 
+	void FixedUpdate()
 	{
 		bishopTop = Physics2D.Linecast(transform.position, bishopCheckTop.position, 1 << LayerMask.NameToLayer ("Player"));
 		bishopBottom = Physics2D.Linecast(transform.position, bishopCheckBottom.position, 1 << LayerMask.NameToLayer ("Player"));
-	
+
+		if (carried) 
+		{
+			this.gameObject.layer = 10;
+			transform.position = player.transform.position;
+		}
+
+		if (!pawnAlive)
+		{
+			rigidbody2D.isKinematic = true;
+			this.gameObject.layer = 10;
+		}
+		else
+		{
+			rigidbody2D.isKinematic = false;
+			this.gameObject.layer = oldLayer;
+		}
+	}
+
+	void Update () 
+	{	
 	    if ((bishopTop || bishopBottom) && Input.GetButton("Fire1") && !pawnAlive) 
 		{
 		  resurrectTime -= Time.deltaTime;
@@ -54,6 +82,11 @@ public class PawnResurrection : MonoBehaviour
 			resurrecting = false;
 			Destroy (cloneResurrect);
 		}
+
+		if ((bishopTop || bishopBottom) && pawnAlive && Input.GetButtonDown ("Fire2") && !carried)
+			carried = true;
+		else if (Input.GetButtonDown ("Fire2") && carried)
+			carried = false;
 
 	}
 
