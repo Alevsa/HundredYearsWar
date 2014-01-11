@@ -48,6 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BishopControls.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\FrogBehaviour.cs" />
+     <Compile Include="Assets\Scripts\FrogSpawner.cs" />
      <Compile Include="Assets\Scripts\PawnResurrection.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
