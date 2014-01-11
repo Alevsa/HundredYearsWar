@@ -5,7 +5,7 @@ public class PawnResurrection : MonoBehaviour
 {
 	public float PawnHealth = 0f;
 
-	public float resurrectTime = 5f;
+	public float resurrectTime = 3f;
 
 	private bool resurrecting;
 	private float startTime;
@@ -45,7 +45,8 @@ public class PawnResurrection : MonoBehaviour
 		if (carried) 
 		{
 			this.gameObject.layer = 10;
-			transform.position = player.transform.position;
+			rigidbody2D.isKinematic = true;
+			transform.position = new Vector3 (player.transform.position.x, player.transform.position.y + player.transform.lossyScale.y / 2);
 		}
 
 		if (!pawnAlive)
@@ -53,7 +54,7 @@ public class PawnResurrection : MonoBehaviour
 			rigidbody2D.isKinematic = true;
 			this.gameObject.layer = 10;
 		}
-		else
+		else if (!carried)
 		{
 			rigidbody2D.isKinematic = false;
 			this.gameObject.layer = oldLayer;
@@ -84,9 +85,15 @@ public class PawnResurrection : MonoBehaviour
 		}
 
 		if ((bishopTop || bishopBottom) && pawnAlive && Input.GetButtonDown ("Fire2") && !carried)
+		{
 			carried = true;
+			transform.Rotate (new Vector3(0, 0, 90));
+		}
 		else if (Input.GetButtonDown ("Fire2") && carried)
+		{
 			carried = false;
+			transform.Rotate (new Vector3(0, 0, -90));
+		}
 
 	}
 
