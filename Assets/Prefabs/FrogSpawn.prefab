@@ -39,9 +39,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnTime: 50
-  spawnDelay: 20
-  frogs:
-  - {fileID: 100000, guid: db059878839036e46b2dbe0e58d21d96, type: 2}
+  spawnDelay: 5
+  frog: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

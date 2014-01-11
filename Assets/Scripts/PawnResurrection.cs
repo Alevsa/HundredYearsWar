@@ -6,6 +6,7 @@ public class PawnResurrection : MonoBehaviour
 	public float PawnHealth = 0f;
 
 	public float resurrectTime = 3f;
+	private float resurrectTimeToGo;
 
 	private bool resurrecting;
 	private float startTime;
@@ -34,6 +35,7 @@ public class PawnResurrection : MonoBehaviour
 		resurrectLoc = transform.Find ("resurrectLoc");
 		oldLayer = gameObject.layer;
 		player = GameObject.Find ("Bishop");
+		resurrectTimeToGo = resurrectTime;
 		//noCollisionLayer = 1 << LayerMask.NameToLayer ("NoCollision");
 	}
 
@@ -44,8 +46,8 @@ public class PawnResurrection : MonoBehaviour
 
 		if (carried) 
 		{
-			this.gameObject.layer = 10;
 			rigidbody2D.isKinematic = true;
+			this.gameObject.layer = 10;
 			transform.position = new Vector3 (player.transform.position.x, player.transform.position.y + player.transform.lossyScale.y / 2);
 		}
 
@@ -65,7 +67,7 @@ public class PawnResurrection : MonoBehaviour
 	{	
 	    if ((bishopTop || bishopBottom) && Input.GetButton("Fire1") && !pawnAlive) 
 		{
-		  resurrectTime -= Time.deltaTime;
+		  resurrectTimeToGo -= Time.deltaTime;
 
 	      if(!resurrecting)
 			{
@@ -73,12 +75,13 @@ public class PawnResurrection : MonoBehaviour
 		      cloneResurrect = (GameObject) Instantiate (ResurrectPrefab, resurrectLoc.position, resurrectLoc.rotation);
 			}
 
-			if(resurrectTime < 0)
+			if(resurrectTimeToGo < 0)
 		       Resurrect ();
 	    }
 
-		if((!bishopTop && !bishopBottom) || !Input.GetButton("Fire1"))
+		if((!bishopTop && !bishopBottom) || Input.GetButtonUp("Fire1"))
 		{
+			resurrectTimeToGo = resurrectTime;
 			resurrecting = false;
 			Destroy (cloneResurrect);
 		}
@@ -92,17 +95,18 @@ public class PawnResurrection : MonoBehaviour
 		{
 			carried = false;
 			transform.Rotate (new Vector3(0, 0, -90));
-			//transform.position = new Vector3 (player.transform.position.x - player.transform.lossyScale.x / 2, player.transform.position.y);
+			transform.position = new Vector3 (player.transform.position.x + player.transform.lossyScale.x / 2, player.transform.position.y);
 		}
 
 	}
 
 	void Resurrect()
 	{
+		rigidbody2D.isKinematic = false;
+		resurrectTimeToGo = resurrectTime;
 		pawnAlive = true;
 		resurrecting = false;
 		Destroy (cloneResurrect);
 		PawnHealth = 100f;
-		transform.Rotate(new Vector3(0, 0, -90));
 	}
 }

@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnTime: 50
-  spawnDelay: 20
+  spawnDelay: 5
   frog: {fileID: 100000, guid: 293a6d80dbe095946b46c94b4f0c4fb2, type: 2}
 --- !u!1001 &23119650
 Prefab:
@@ -1468,7 +1468,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 115102292}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: resurrectLoc
   m_TagString: Untagged
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
@@ -1481,8 +1481,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400002, guid: c667e153c19648340924780653c28131, type: 2}
   m_PrefabInternal: {fileID: 1155552171}
   m_GameObject: {fileID: 115102291}
-  m_LocalRotation: {x: 0, y: 0, z: -.707106829, w: .707106829}
-  m_LocalPosition: {x: .602683604, y: -.0203789026, z: -.0100100003}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.00393652916, y: .567858696, z: -.0100100003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1078112204}
@@ -3789,6 +3789,18 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: b9bb083eaedb64f4794a24fdec37da66, type: 2}
+    - target: {fileID: 5800000, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: b9bb083eaedb64f4794a24fdec37da66, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
   m_RootGameObject: {fileID: 843819019}
@@ -3802,7 +3814,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 295945978}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bishopCheckBottom
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -4948,7 +4960,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 429034310}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bishopCheckTop
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -5230,7 +5242,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 457980280}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: resurrectLoc
   m_TagString: Untagged
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
@@ -5368,7 +5380,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 465149532}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bishopCheckBottom
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -7682,7 +7694,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 650828222}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bishopCheckBottom
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -7889,7 +7901,7 @@ GameObject:
   - 61: {fileID: 679794162}
   - 50: {fileID: 679794161}
   - 114: {fileID: 679794165}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pawn
   m_TagString: Pawn
   m_Icon: {fileID: 0}
@@ -7902,8 +7914,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
   m_PrefabInternal: {fileID: 1177375557}
   m_GameObject: {fileID: 679794159}
-  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
-  m_LocalPosition: {x: -5.65882492, y: -2.97534466, z: .0100097656}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.9514184, y: -2.85426068, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 465149532}
@@ -7917,12 +7929,12 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 1177375557}
   m_GameObject: {fileID: 679794159}
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
   m_FixedAngle: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -7934,7 +7946,7 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 1177375557}
   m_GameObject: {fileID: 679794159}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4c49405ba5035e94093560ea34958c1f, type: 2}
   m_IsTrigger: 0
   m_Size: {x: .119999997, y: .300000012}
   m_Center: {x: 0, y: .0399999991}
@@ -7946,7 +7958,7 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 1177375557}
   m_GameObject: {fileID: 679794159}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4c49405ba5035e94093560ea34958c1f, type: 2}
   m_IsTrigger: 0
   m_Radius: .0799999982
   m_Center: {x: 0, y: -.119999997}
@@ -8557,7 +8569,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 715397171}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bishopCheckTop
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -8588,7 +8600,7 @@ GameObject:
   - 61: {fileID: 715886195}
   - 50: {fileID: 715886194}
   - 114: {fileID: 715886199}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pawn
   m_TagString: Pawn
   m_Icon: {fileID: 0}
@@ -8602,12 +8614,12 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 1399560597}
   m_GameObject: {fileID: 715886193}
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
   m_FixedAngle: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -8619,7 +8631,7 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 1399560597}
   m_GameObject: {fileID: 715886193}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4c49405ba5035e94093560ea34958c1f, type: 2}
   m_IsTrigger: 0
   m_Size: {x: .119999997, y: .300000012}
   m_Center: {x: 0, y: .0399999991}
@@ -8631,7 +8643,7 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 1399560597}
   m_GameObject: {fileID: 715886193}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4c49405ba5035e94093560ea34958c1f, type: 2}
   m_IsTrigger: 0
   m_Radius: .0799999982
   m_Center: {x: 0, y: -.119999997}
@@ -8665,8 +8677,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
   m_PrefabInternal: {fileID: 1399560597}
   m_GameObject: {fileID: 715886193}
-  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
-  m_LocalPosition: {x: -2.87641907, y: -2.97926068, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.75141907, y: -2.85426068, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 717682633}
@@ -8696,7 +8708,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 717682633}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bishopCheckBottom
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -9942,7 +9954,7 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 293197062}
   m_GameObject: {fileID: 843819019}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b9bb083eaedb64f4794a24fdec37da66, type: 2}
   m_IsTrigger: 0
   m_Size: {x: .25, y: .550000012}
   m_Center: {x: 0, y: .109999999}
@@ -9954,7 +9966,7 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 293197062}
   m_GameObject: {fileID: 843819019}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b9bb083eaedb64f4794a24fdec37da66, type: 2}
   m_IsTrigger: 0
   m_Radius: .150000006
   m_Center: {x: 0, y: -.25}
@@ -11201,7 +11213,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 960901098}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: resurrectLoc
   m_TagString: Untagged
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
@@ -12216,7 +12228,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1059066042}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bishopCheckTop
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -12423,7 +12435,7 @@ GameObject:
   - 61: {fileID: 1078112206}
   - 50: {fileID: 1078112205}
   - 114: {fileID: 1078112209}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pawn
   m_TagString: Pawn
   m_Icon: {fileID: 0}
@@ -12436,9 +12448,9 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
   m_PrefabInternal: {fileID: 1155552171}
   m_GameObject: {fileID: 1078112203}
-  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
-  m_LocalPosition: {x: .701747417, y: -2.91266227, z: .0100097656}
-  m_LocalScale: {x: 1.80969572, y: 1.80969572, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .44858098, y: -2.85426068, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 295945978}
   - {fileID: 1059066042}
@@ -12451,12 +12463,12 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 1155552171}
   m_GameObject: {fileID: 1078112203}
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
   m_FixedAngle: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -12468,7 +12480,7 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 1155552171}
   m_GameObject: {fileID: 1078112203}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4c49405ba5035e94093560ea34958c1f, type: 2}
   m_IsTrigger: 0
   m_Size: {x: .119999997, y: .300000012}
   m_Center: {x: 0, y: .0399999991}
@@ -12480,7 +12492,7 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 1155552171}
   m_GameObject: {fileID: 1078112203}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4c49405ba5035e94093560ea34958c1f, type: 2}
   m_IsTrigger: 0
   m_Radius: .0799999982
   m_Center: {x: 0, y: -.119999997}
@@ -13092,15 +13104,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .701747417
+      value: .44858098
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.91266227
+      value: -2.85426068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalPosition.z
-      value: .0100097656
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalRotation.x
@@ -13112,23 +13124,39 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .707106829
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .707106829
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.80969572
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.80969572
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: resurrectTime
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.00393652916
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .567858696
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c667e153c19648340924780653c28131, type: 2}
@@ -13496,15 +13524,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.65882492
+      value: -5.9514184
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.97534466
+      value: -2.85426068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalPosition.z
-      value: .0100097656
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalRotation.x
@@ -13516,11 +13544,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .707106829
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .707106829
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: resurrectTime
@@ -14880,15 +14908,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.56284523
+      value: 2.84858131
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.96863556
+      value: -2.85426068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalPosition.z
-      value: .0100097656
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalRotation.x
@@ -14900,11 +14928,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .707106829
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .707106829
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: resurrectTime
@@ -15675,7 +15703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnTime: 50
-  spawnDelay: 20
+  spawnDelay: 5
   frog: {fileID: 100000, guid: 121af509532f3454a8b54692dd28a655, type: 2}
 --- !u!1001 &1358075826
 Prefab:
@@ -16128,11 +16156,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.87641907
+      value: -2.75141907
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.97926068
+      value: -2.85426068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalPosition.z
@@ -16148,11 +16176,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .707106829
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .707106829
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: resurrectTime
@@ -18820,10 +18848,10 @@ Transform:
   m_LocalPosition: {x: 1.701015, y: .0537885465, z: -.0100097656}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1078112204}
-  - {fileID: 679794160}
   - {fileID: 1968457976}
+  - {fileID: 1078112204}
   - {fileID: 715886198}
+  - {fileID: 679794160}
   m_Father: {fileID: 0}
 --- !u!1 &1591702916
 GameObject:
@@ -22554,7 +22582,7 @@ GameObject:
   - 61: {fileID: 1968457978}
   - 50: {fileID: 1968457977}
   - 114: {fileID: 1968457981}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pawn
   m_TagString: Pawn
   m_Icon: {fileID: 0}
@@ -22567,8 +22595,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
   m_PrefabInternal: {fileID: 1297854205}
   m_GameObject: {fileID: 1968457975}
-  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
-  m_LocalPosition: {x: 2.56284523, y: -2.96863556, z: .0100097656}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.84858131, y: -2.85426068, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 650828222}
@@ -22582,12 +22610,12 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 1297854205}
   m_GameObject: {fileID: 1968457975}
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
   m_FixedAngle: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -22599,7 +22627,7 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 1297854205}
   m_GameObject: {fileID: 1968457975}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4c49405ba5035e94093560ea34958c1f, type: 2}
   m_IsTrigger: 0
   m_Size: {x: .119999997, y: .300000012}
   m_Center: {x: 0, y: .0399999991}
@@ -22611,7 +22639,7 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 1297854205}
   m_GameObject: {fileID: 1968457975}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4c49405ba5035e94093560ea34958c1f, type: 2}
   m_IsTrigger: 0
   m_Radius: .0799999982
   m_Center: {x: 0, y: -.119999997}
@@ -22774,7 +22802,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1979503027}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: resurrectLoc
   m_TagString: Untagged
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
@@ -24544,7 +24572,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2100822140}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bishopCheckTop
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
