@@ -3,7 +3,9 @@ using System.Collections;
 
 public class Timer : MonoBehaviour 
 {
-	public float timeRemaining = 100;							
+	public float TimeRemaining = 300f;
+	private float minutesRemaining;
+	private float secondsRemaining;
 	
 	void Awake ()
 	{
@@ -11,9 +13,10 @@ public class Timer : MonoBehaviour
 	
 	void Update ()
 	{
-		timeRemaining -= Time.deltaTime;
-		// Set the score text.
-		guiText.text = "Timer: " + timeRemaining;
+		TimeRemaining -= Time.deltaTime;
+		minutesRemaining = TimeRemaining / 60;
+		secondsRemaining = TimeRemaining % 60;
+		guiText.text = string.Format("Time Remaining: {0:00}m:{1:00}s", minutesRemaining, secondsRemaining);
 	}
 	
 }

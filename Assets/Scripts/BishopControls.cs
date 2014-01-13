@@ -6,9 +6,9 @@ public class BishopControls : MonoBehaviour
 {
 
 	//ALEX IS A SOMETHING ELSE
-	public float JumpForce = 300f;
+	public float JumpForce = 600f;
 	public float MaxSpeed = 3f;
-	public float MoveForce = 20f;
+	public float MoveForce = 200f;
 
 	private bool facingRight = true;
 	private bool grounded = false;
