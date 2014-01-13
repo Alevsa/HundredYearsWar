@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class BishopControls : MonoBehaviour 
@@ -15,11 +15,13 @@ public class BishopControls : MonoBehaviour
 	private bool jump = false;
 
 	private Transform groundCheck;
+	private Animator anim;
 
 	//Used for initialization.
 	void Start () 
 	{
 		groundCheck = transform.Find("groundCheck");
+		anim = GetComponent<Animator>();
 	}
 
 	//Update() is called every frame. Used for regular updates such as moving non physics objects.
@@ -39,6 +41,7 @@ public class BishopControls : MonoBehaviour
 		//Controls for players movement.
 		//Sets h to +/- 1 depending on which way the player presses on either a controller joystick or w, a, left/right arrow, which are preset into Unity under "Horizontal" Input.
 		float h = Input.GetAxisRaw ("Horizontal");
+		anim.SetFloat("Speed", Mathf.Abs (h));
 
 		//If his velocity in a certain direction is less than his max speed, he can move that way.
 		if (h * rigidbody2D.velocity.x < MaxSpeed) 
