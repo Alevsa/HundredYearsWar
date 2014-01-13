@@ -41,7 +41,7 @@ public class BishopControls : MonoBehaviour
 		//Controls for players movement.
 		//Sets h to +/- 1 depending on which way the player presses on either a controller joystick or w, a, left/right arrow, which are preset into Unity under "Horizontal" Input.
 		float h = Input.GetAxisRaw ("Horizontal");
-		anim.SetFloat("Speed", Mathf.Abs (h));
+		anim.SetFloat("Speed", h);
 
 		//If his velocity in a certain direction is less than his max speed, he can move that way.
 		if (h * rigidbody2D.velocity.x < MaxSpeed) 

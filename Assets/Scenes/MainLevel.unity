@@ -1245,6 +1245,14 @@ Prefab:
       propertyPath: m_Center.y
       value: .0649999976
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -.369018078
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.00710992515
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
   m_RootGameObject: {fileID: 843819019}
@@ -5256,7 +5264,7 @@ Transform:
   m_PrefabInternal: {fileID: 293197062}
   m_GameObject: {fileID: 1263790171}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0171534121, y: -.579931736, z: -.0100097656}
+  m_LocalPosition: {x: -.00710992515, y: -.369018078, z: -.0100097656}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 843819024}
@@ -6685,7 +6693,7 @@ GameObject:
   - 132: {fileID: 1744186305}
   - 114: {fileID: 1744186307}
   m_Layer: 0
-  m_Name: Score
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6699,9 +6707,9 @@ GUIText:
   m_GameObject: {fileID: 1744186304}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Score
-  m_Anchor: 1
-  m_Alignment: 1
+  m_Text: Timer
+  m_Anchor: 0
+  m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
@@ -6721,7 +6729,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1744186304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .829999983, y: 1, z: .0109863281}
+  m_LocalPosition: {x: .779999971, y: 1, z: .0109863281}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1922537223}
@@ -6733,10 +6741,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1744186304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d4488a8ee23a4e4e98b3fbd455301fb, type: 3}
+  m_Script: {fileID: 11500000, guid: a0dbcd841c62f6d4382292726b21d54c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  timeRemaining: 100
 --- !u!1001 &1752236430
 Prefab:
   m_ObjectHideFlags: 0

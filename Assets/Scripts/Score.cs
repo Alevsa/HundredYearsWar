@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Score : MonoBehaviour 
 	{
-		public int score = 0;							
+		public float Timer = 100;							
 		
 		void Awake ()
 		{
@@ -11,8 +11,9 @@ public class Score : MonoBehaviour
 		
 		void Update ()
 		{
+		Timer -= Time.deltaTime;
 			// Set the score text.
-			guiText.text = "Score: " + score;
+			guiText.text = "Timer: " + Timer;
 		}
 		
 	}
