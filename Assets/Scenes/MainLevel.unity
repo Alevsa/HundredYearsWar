@@ -3811,6 +3811,7 @@ GameObject:
   - 61: {fileID: 843819021}
   - 50: {fileID: 843819020}
   - 114: {fileID: 843819025}
+  - 95: {fileID: 843819026}
   m_Layer: 9
   m_Name: Bishop
   m_TagString: Player
@@ -3909,6 +3910,20 @@ MonoBehaviour:
   JumpForce: 300
   MaxSpeed: 3
   MoveForce: 100
+--- !u!95 &843819026
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 843819019}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 07e3a834c38a21b4986aaeb5a66a27c3, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!1001 &853222950
 Prefab:
   m_ObjectHideFlags: 0
