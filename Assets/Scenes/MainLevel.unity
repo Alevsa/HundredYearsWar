@@ -1217,6 +1217,34 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: b9bb083eaedb64f4794a24fdec37da66, type: 2}
+    - target: {fileID: 400002, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800000, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
+      propertyPath: m_Radius
+      value: .115000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800000, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
+      propertyPath: m_Center.y
+      value: -.204999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
+      propertyPath: m_Size.x
+      value: .150000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
+      propertyPath: m_Size.y
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
+      propertyPath: m_Center.y
+      value: .0649999976
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
   m_RootGameObject: {fileID: 843819019}
@@ -3845,8 +3873,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: b9bb083eaedb64f4794a24fdec37da66, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: .25, y: .550000012}
-  m_Center: {x: 0, y: .109999999}
+  m_Size: {x: .150000006, y: .5}
+  m_Center: {x: 0, y: .0649999976}
 --- !u!58 &843819022
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3857,8 +3885,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: b9bb083eaedb64f4794a24fdec37da66, type: 2}
   m_IsTrigger: 0
-  m_Radius: .150000006
-  m_Center: {x: 0, y: -.25}
+  m_Radius: .115000002
+  m_Center: {x: 0, y: -.204999998}
 --- !u!212 &843819023
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3891,7 +3919,7 @@ Transform:
   m_GameObject: {fileID: 843819019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .432003975, y: -2.19481683, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 1263790172}
   m_Father: {fileID: 0}
@@ -3921,7 +3949,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 07e3a834c38a21b4986aaeb5a66a27c3, type: 2}
   m_CullingMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_AnimatePhysics: 0
   m_HasTransformHierarchy: 1
 --- !u!1001 &853222950
