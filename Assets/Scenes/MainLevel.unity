@@ -1457,11 +1457,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .439212799
+      value: .589689255
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.6434772
+      value: -2.57726288
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3320,7 +3320,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_SortingLayerID: 3652605219
-  m_Sprite: {fileID: 21300000, guid: 48b185e37d55e5a47a8c89180c374925, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a5a88e7058b68044ab3e1ade789d3a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &679794165
 MonoBehaviour:
@@ -3336,7 +3336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PawnHealth: 0
   resurrectTime: 3
-  ResurrectPrefab: {fileID: 100002, guid: fcb7f551bad726f45817a74532a4d27e, type: 2}
+  ResurrectPrefab: {fileID: 679794159}
 --- !u!1001 &694871354
 Prefab:
   m_ObjectHideFlags: 0
@@ -3493,7 +3493,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_SortingLayerID: 3652605219
-  m_Sprite: {fileID: 21300000, guid: 48b185e37d55e5a47a8c89180c374925, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a5a88e7058b68044ab3e1ade789d3a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &715886198
 Transform:
@@ -3523,7 +3523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PawnHealth: 0
   resurrectTime: 3
-  ResurrectPrefab: {fileID: 100002, guid: fcb7f551bad726f45817a74532a4d27e, type: 2}
+  ResurrectPrefab: {fileID: 715886193}
 --- !u!1 &717682632
 GameObject:
   m_ObjectHideFlags: 0
@@ -4732,7 +4732,7 @@ Transform:
   m_PrefabInternal: {fileID: 352432145}
   m_GameObject: {fileID: 1078112203}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .439212799, y: -2.6434772, z: 0}
+  m_LocalPosition: {x: .589689255, y: -2.57726288, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 295945978}
@@ -4801,7 +4801,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_SortingLayerID: 3652605219
-  m_Sprite: {fileID: 21300000, guid: 48b185e37d55e5a47a8c89180c374925, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a5a88e7058b68044ab3e1ade789d3a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1078112209
 MonoBehaviour:
@@ -4817,7 +4817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PawnHealth: 0
   resurrectTime: 3
-  ResurrectPrefab: {fileID: 100002, guid: fcb7f551bad726f45817a74532a4d27e, type: 2}
+  ResurrectPrefab: {fileID: 1078112203}
 --- !u!1001 &1094050585
 Prefab:
   m_ObjectHideFlags: 0
@@ -6569,10 +6569,10 @@ Transform:
   m_LocalPosition: {x: 1.701015, y: .0537885465, z: -.0100097656}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1968457976}
   - {fileID: 679794160}
-  - {fileID: 715886198}
   - {fileID: 1078112204}
+  - {fileID: 715886198}
+  - {fileID: 1968457976}
   m_Father: {fileID: 0}
 --- !u!1 &1678207526
 GameObject:
@@ -7654,7 +7654,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_SortingLayerID: 3652605219
-  m_Sprite: {fileID: 21300000, guid: 48b185e37d55e5a47a8c89180c374925, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a5a88e7058b68044ab3e1ade789d3a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1968457981
 MonoBehaviour:
@@ -7670,7 +7670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PawnHealth: 0
   resurrectTime: 3
-  ResurrectPrefab: {fileID: 100002, guid: fcb7f551bad726f45817a74532a4d27e, type: 2}
+  ResurrectPrefab: {fileID: 1968457975}
 --- !u!1 &1979503026
 GameObject:
   m_ObjectHideFlags: 0
