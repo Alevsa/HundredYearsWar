@@ -49,8 +49,11 @@
      <Compile Include="Assets\Scripts\BishopControls.cs" />
      <Compile Include="Assets\Scripts\BishopHealth.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\EndingScene\LevelFade.cs" />
+     <Compile Include="Assets\Scripts\EndingScene\TextChange.cs" />
      <Compile Include="Assets\Scripts\FrogBehaviour.cs" />
      <Compile Include="Assets\Scripts\FrogSpawner.cs" />
+     <Compile Include="Assets\Scripts\OtherControls.cs" />
      <Compile Include="Assets\Scripts\PawnResurrection.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />

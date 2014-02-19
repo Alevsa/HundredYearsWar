@@ -6,6 +6,7 @@ public class Timer : MonoBehaviour
 	public float TimeRemaining = 300f;
 	private float minutesRemaining;
 	private float secondsRemaining;
+	public string LoadWhichLevel;
 	
 	void Awake ()
 	{
@@ -17,6 +18,11 @@ public class Timer : MonoBehaviour
 		minutesRemaining = TimeRemaining / 60;
 		secondsRemaining = TimeRemaining % 60;
 		guiText.text = string.Format("Time Remaining: {0:00}m:{1:00}s", minutesRemaining, secondsRemaining);
+
+		if (TimeRemaining == 0f) 
+		{
+			Application.LoadLevel (LoadWhichLevel);
+		}
 	}
 	
 }
