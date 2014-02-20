@@ -18,15 +18,19 @@ public class OtherControls : MonoBehaviour
 			{
 				gamePaused = true;
 				guiText.text = string.Format("Paused\n\nControls\nW,A,S,D - Move, Spacebar - Jump\nQ - Pick up Pawn, Left Mouse - Resurrect Pawn\n M - Mute Music");
-				audio.Pause ();
 				Time.timeScale = 0;
+				if (VolumeOn)
+				audio.Pause ();
 			}
 			else
 			{
 				gamePaused = false;
 				guiText.text = string.Format("");
-				audio.Play();
 				Time.timeScale = 1;
+
+				if(VolumeOn)
+				audio.Play();
+
 			}
 		}
 

@@ -15,11 +15,11 @@ public class Timer : MonoBehaviour
 	void Update ()
 	{
 		TimeRemaining -= Time.deltaTime;
-		minutesRemaining = TimeRemaining / 60;
-		secondsRemaining = TimeRemaining % 60;
+		minutesRemaining =  Mathf.FloorToInt(TimeRemaining / 60);
+		secondsRemaining =  Mathf.FloorToInt(TimeRemaining % 60);
 		guiText.text = string.Format("Time Remaining: {0:00}m:{1:00}s", minutesRemaining, secondsRemaining);
 
-		if (TimeRemaining == 0f) 
+		if (TimeRemaining <= 0f) 
 		{
 			Application.LoadLevel (LoadWhichLevel);
 		}
