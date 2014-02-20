@@ -13,6 +13,8 @@ GameObject:
   - 61: {fileID: 6100000}
   - 50: {fileID: 5000000}
   - 114: {fileID: 11400000}
+  - 95: {fileID: 9500000}
+  - 114: {fileID: 11400002}
   m_Layer: 11
   m_Name: Pawn
   m_TagString: Pawn
@@ -76,7 +78,7 @@ GameObject:
   m_Layer: 0
   m_Name: frogCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -87,7 +89,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.88939095, y: -2.57220054, z: 0}
+  m_LocalPosition: {x: 2.92311525, y: -2.62121964, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 400006}
@@ -102,7 +104,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.00393652916, y: .567858696, z: -.0100100003}
+  m_LocalPosition: {x: -.00223207474, y: .557040453, z: -.0100100003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -135,7 +137,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.563499451, y: -.109904133, z: -.0009765625}
+  m_LocalPosition: {x: .201937899, y: -.109904133, z: -.0009765625}
   m_LocalScale: {x: .666666687, y: .666666687, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -164,7 +166,7 @@ CircleCollider2D:
   m_Material: {fileID: 6200000, guid: 4c49405ba5035e94093560ea34958c1f, type: 2}
   m_IsTrigger: 0
   m_Radius: .119999997
-  m_Center: {x: 0, y: -.200000003}
+  m_Center: {x: 0, y: -.180000007}
 --- !u!61 &6100000
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -174,8 +176,22 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: 4c49405ba5035e94093560ea34958c1f, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: .119999997, y: .300000012}
+  m_Size: {x: .119999997, y: .400000006}
   m_Center: {x: 0, y: .0399999991}
+--- !u!95 &9500000
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8c7d075fd7608204ba92b2edb8c22297, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 0
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -187,9 +203,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19562177218bff04190b0aa231f2f4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  facingLeft: 0
   PawnHealth: 0
   resurrectTime: 3
   ResurrectPrefab: {fileID: 100002, guid: fcb7f551bad726f45817a74532a4d27e, type: 2}
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea96134c09d8534fb70d70e972b48ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

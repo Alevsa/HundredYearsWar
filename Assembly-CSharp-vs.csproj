@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\FrogBehaviour.cs" />
      <Compile Include="Assets\Scripts\FrogSpawner.cs" />
      <Compile Include="Assets\Scripts\OtherControls.cs" />
+     <Compile Include="Assets\Scripts\PawnAttack.cs" />
      <Compile Include="Assets\Scripts\PawnResurrection.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
