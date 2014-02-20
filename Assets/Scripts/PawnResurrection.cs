@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PawnResurrection : MonoBehaviour
 {
+	public bool facingLeft;
 	public float PawnHealth = 0f;
 
 	public float resurrectTime = 3f;
@@ -36,7 +37,6 @@ public class PawnResurrection : MonoBehaviour
 		oldLayer = gameObject.layer;
 		player = GameObject.Find ("Bishop");
 		resurrectTimeToGo = resurrectTime;
-		//noCollisionLayer = 1 << LayerMask.NameToLayer ("NoCollision");
 	}
 
 	void FixedUpdate()
@@ -53,8 +53,8 @@ public class PawnResurrection : MonoBehaviour
 
 		if (!pawnAlive)
 		{
-			rigidbody2D.isKinematic = true;
-			this.gameObject.layer = 10;
+		    rigidbody2D.isKinematic = true;
+		    this.gameObject.layer = 10;
 		}
 		else if (!carried)
 		{
