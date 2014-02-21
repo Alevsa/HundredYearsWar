@@ -7842,7 +7842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0dbcd841c62f6d4382292726b21d54c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeRemaining: 300
+  TimeRemaining: 270
   LoadWhichLevel: EndingScene
 --- !u!1001 &1752236430
 Prefab:

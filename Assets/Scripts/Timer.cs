@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Timer : MonoBehaviour 
 {
-	public float TimeRemaining = 300f;
+	public float TimeRemaining = 270f;
 	private float minutesRemaining;
 	private float secondsRemaining;
 	public string LoadWhichLevel;

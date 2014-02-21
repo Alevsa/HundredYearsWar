@@ -136,8 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d71b1f2498492a549a15f64bdb43320c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstText: You may have won the battle...
-  secondText: But Joan of Arc shall win the war!
+  firstText: Thou hast won the battle...
+  secondText: "Though Joan of Arc hath won the war\r!"
   thirdText: The Hundred Years War
   fourthText: A Game By Sam Rowlands, Alex Hayes & Evgeniy Medvedev
   fifthText: Made for One Game A Month. Theme - Respawn.
