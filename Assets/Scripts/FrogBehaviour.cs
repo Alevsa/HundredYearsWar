@@ -4,6 +4,7 @@ using System.Collections;
 public class FrogBehaviour : MonoBehaviour 
 {
 	public float deathDuration = 60f;
+	private bool currentlyDead = false;
 	
 	public bool facingRight = true;
 	public float moveForce = 100f;
@@ -12,6 +13,9 @@ public class FrogBehaviour : MonoBehaviour
 	private float h;
 
 	private Transform checker;
+	private Transform PikeLoc;
+
+
 	private bool flipFrog = false;
 
 	public float health = 100f;
@@ -26,13 +30,23 @@ public class FrogBehaviour : MonoBehaviour
 
 	private bool fell = false;
 
+	public GameObject RightPikePrefab;
+	public GameObject LeftPikePrefab;
+	private GameObject cloneRightPike;
+	private GameObject cloneLeftPike;
+
+	private bool pikePresent = false;
+
+	private bool attacking = false;
+
 	void Start () 
 	{
+		PikeLoc = transform.Find ("PikeLoc");
 		checker = transform.Find ("Checker");
+
 		anim = GetComponent<Animator>();
 
 		oldLayer = gameObject.layer;
-
 	}
 
 	void FixedUpdate () 
@@ -42,10 +56,10 @@ public class FrogBehaviour : MonoBehaviour
 
 		anim.SetFloat("Speed", Mathf.Abs (h));
 
-		if (facingRight)
+		if (facingRight && !pawnClose && !currentlyDead)
 			h = 1;
 
-		if (!facingRight)
+		if (!facingRight && !pawnClose && !currentlyDead)
 			h = -1;
 
 		if (flipFrog) 
@@ -65,11 +79,6 @@ public class FrogBehaviour : MonoBehaviour
 
 		if(Mathf.Abs(rigidbody2D.velocity.x) > maxSpeed)
 			rigidbody2D.velocity = new Vector2(Mathf.Sign(rigidbody2D.velocity.x) * maxSpeed, rigidbody2D.velocity.y);
-		}
-
-		if (health == 0) 
-		{
-			StartCoroutine(Death());
 		}
 	}
 
@@ -102,14 +111,40 @@ public class FrogBehaviour : MonoBehaviour
 	}
 
 	void Attack()
-	{
+	{ 
+		attacking = true;
+
+		if (facingRight && attacking && !pikePresent) 
+		{
+			cloneRightPike = (GameObject) Instantiate (RightPikePrefab, PikeLoc.position, PikeLoc.rotation);
+			pikePresent = true;
+			attacking = false;
+		}
+
+		if (!facingRight && attacking &&!pikePresent) 
+		{
+			cloneLeftPike = (GameObject) Instantiate (LeftPikePrefab, PikeLoc.position, PikeLoc.rotation);
+			pikePresent = true;
+			attacking = false;
+		}
+
+		if (!pawnClose) 
+		{
+			Destroy (cloneRightPike);
+			Destroy (cloneLeftPike);
+			pikePresent = false;
+		}
 
 	}
 
     IEnumerator Death()
 	{
+		currentlyDead = true;
 		h = 0f;
 		rigidbody2D.isKinematic = true;
+		Destroy (cloneRightPike);
+		Destroy (cloneLeftPike);
+		pikePresent = false;
 		this.gameObject.layer = 10;
 		if (!fell) 
 		{
@@ -127,5 +162,6 @@ public class FrogBehaviour : MonoBehaviour
 			this.transform.position += new Vector3(0f, 0.5f, 0f);
 			fell = false;
 		}
+		currentlyDead = false;
 	}
 }

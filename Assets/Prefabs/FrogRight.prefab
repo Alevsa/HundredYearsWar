@@ -36,6 +36,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400004}
+  m_Layer: 0
+  m_Name: PikeLoc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -43,10 +58,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.91705036, y: -2.32075286, z: 0}
+  m_LocalPosition: {x: 2.09312391, y: -2.27273273, z: 0}
   m_LocalScale: {x: 3.20000005, y: 3.20000005, z: 1}
   m_Children:
   - {fileID: 400002}
+  - {fileID: 400004}
   m_Father: {fileID: 0}
 --- !u!4 &400002
 Transform:
@@ -55,7 +71,18 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .085375607, y: -.0227817893, z: -.0100097656}
+  m_LocalPosition: {x: .124510229, y: -.0227817893, z: -.0100097656}
+  m_LocalScale: {x: .3125, y: .3125, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400000}
+--- !u!4 &400004
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.0568183884, y: .0254377723, z: -.0100097656}
   m_LocalScale: {x: .3125, y: .3125, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -127,6 +154,8 @@ MonoBehaviour:
   maxSpeed: 2
   health: 100
   noDamagePeriod: 2
+  RightPikePrefab: {fileID: 100000, guid: cf6ab88999483664da4b90e18e1a5e7e, type: 2}
+  LeftPikePrefab: {fileID: 100000, guid: f12c30a79cf0db2418ab144d04cf71f3, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

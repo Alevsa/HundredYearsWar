@@ -7,25 +7,35 @@ public class PawnAttack : MonoBehaviour
 	private Transform FrogCheck;
 
 	private Animator anim;
+	private PawnResurrection pawnRes;
 
 	private bool attack = false;
+	private bool leftAttack = false;
 
 	// Use this for initialization
 	void Start () 
 	{
 		FrogCheck = transform.Find ("frogCheck");
 		anim = GetComponent<Animator>();
+		pawnRes = GetComponent<PawnResurrection> ();
 	}
 
 	void FixedUpdate () 
 	{
 		anim.SetBool("Attack", attack);
+		anim.SetBool ("leftAttack", leftAttack);
+
 		FrogPresent = Physics2D.Linecast (transform.position, FrogCheck.position, 1<< LayerMask.NameToLayer ("Ground"));
 
-		if (FrogPresent && (this.gameObject.layer == 11)) 
-			attack = true;
-		else
-			attack = false;
+		if (FrogPresent && (this.gameObject.layer == 11)) {
+						if (pawnRes.facingRight == true)
+								attack = true;
+						else
+								leftAttack = true;
+				} else {
+						attack = false;
+						leftAttack = false;
+				}
 
 	}
 }

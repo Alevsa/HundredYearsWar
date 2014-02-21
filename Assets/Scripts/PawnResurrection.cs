@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PawnResurrection : MonoBehaviour
 {
-	public bool facingLeft;
+	public bool facingRight;
 	public float PawnHealth = 0f;
 
 	public float resurrectTime = 3f;
@@ -37,6 +37,9 @@ public class PawnResurrection : MonoBehaviour
 		oldLayer = gameObject.layer;
 		player = GameObject.Find ("Bishop");
 		resurrectTimeToGo = resurrectTime;
+
+		if (!facingRight)
+			Flip ();
 	}
 
 	void FixedUpdate()
@@ -108,5 +111,12 @@ public class PawnResurrection : MonoBehaviour
 		resurrecting = false;
 		Destroy (cloneResurrect);
 		PawnHealth = 100f;
+	}
+
+	void Flip ()
+	{
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
 	}
 }

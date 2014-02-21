@@ -6,7 +6,7 @@ public class LevelFade : MonoBehaviour
 	public float FadeTime = 5f;
 	public Texture FadeTexture;
 	private float AlphaFadeValue = 1f;
-	private float AlphaFadeOutValue = 0f;
+//	private float AlphaFadeOutValue = 0f;
 
 
 	// Use this for initialization
