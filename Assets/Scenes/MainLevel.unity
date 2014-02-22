@@ -282,7 +282,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 2a49efa531eb736428b61f56dbc78d12, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08107835dfa26ec4c91cd3168db4934e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &27134457
 Transform:
@@ -291,8 +291,8 @@ Transform:
   m_PrefabInternal: {fileID: 1195530858}
   m_GameObject: {fileID: 27134455}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.423828781, y: -.0996792316, z: .0100097656}
-  m_LocalScale: {x: .808931708, y: .808931768, z: 1}
+  m_LocalPosition: {x: .00366938114, y: 7.42292118, z: .0100097656}
+  m_LocalScale: {x: 1.77510655, y: 1.77510679, z: 1}
   m_Children: []
   m_Father: {fileID: 1378760197}
 --- !u!1 &45354521
@@ -5874,11 +5874,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 6bf38b70858a0dc47817212456fde236, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -.423828781
+      value: .00366938114
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6bf38b70858a0dc47817212456fde236, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -.0996792316
+      value: 7.42292118
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6bf38b70858a0dc47817212456fde236, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5899,6 +5899,14 @@ Prefab:
     - target: {fileID: 400000, guid: 6bf38b70858a0dc47817212456fde236, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6bf38b70858a0dc47817212456fde236, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.77510655
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6bf38b70858a0dc47817212456fde236, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.77510679
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6bf38b70858a0dc47817212456fde236, type: 2}
