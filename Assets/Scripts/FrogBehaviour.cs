@@ -3,6 +3,11 @@ using System.Collections;
 
 public class FrogBehaviour : MonoBehaviour 
 {
+	public GameObject healthBarPrefab;
+	//public GameObject healthBarOutlinePrefab;
+	private GameObject cloneHealthBar;
+	//private GameObject cloneHealthBarOutline;
+	
 	public float deathDuration = 60f;
 	private bool currentlyDead = false;
 	
@@ -14,7 +19,8 @@ public class FrogBehaviour : MonoBehaviour
 
 	private Transform checker;
 	private Transform PikeLoc;
-
+	private Transform OtherFrogCheck;
+	private Transform healthBarLoc;
 
 	private bool flipFrog = false;
 
@@ -23,6 +29,7 @@ public class FrogBehaviour : MonoBehaviour
 	private float lastHitTime;
 	
 	private bool pawnClose = false;
+	private bool bishopClose = false;
 
 	private int oldLayer;
 	
@@ -39,10 +46,17 @@ public class FrogBehaviour : MonoBehaviour
 
 	private bool attacking = false;
 
+	private SpriteRenderer healthBar;
+	private Vector3 healthScale;
+
 	void Start () 
 	{
 		PikeLoc = transform.Find ("PikeLoc");
 		checker = transform.Find ("Checker");
+		OtherFrogCheck = transform.Find ("OtherFrogCheck");
+		healthBarLoc = transform.Find ("HealthBar");
+
+		CreateHealthBar ();
 
 		anim = GetComponent<Animator>();
 
@@ -51,8 +65,9 @@ public class FrogBehaviour : MonoBehaviour
 
 	void FixedUpdate () 
 	{
-		flipFrog = Physics2D.Linecast (transform.position, checker.position, 1<< LayerMask.NameToLayer ("Blocker"));
+		flipFrog = Physics2D.Linecast (checker.position, OtherFrogCheck.position, 1<< LayerMask.NameToLayer ("Blocker"));
 		pawnClose = Physics2D.Linecast (transform.position, checker.position, 1<< LayerMask.NameToLayer ("Ally"));
+		bishopClose = Physics2D.Linecast (transform.position, checker.position, 1<< LayerMask.NameToLayer ("Player"));
 
 		anim.SetFloat("Speed", Mathf.Abs (h));
 
@@ -65,13 +80,13 @@ public class FrogBehaviour : MonoBehaviour
 		if (flipFrog) 
 			Flip();
 
-	    if (pawnClose) 
+	    if ((pawnClose || bishopClose) && !currentlyDead) 
 		{
 			h = 0f;
 			Attack ();
 		}
 
-		if(!pawnClose)
+		if(!pawnClose &&  !bishopClose)
 		{
 
 		if(rigidbody2D.velocity.x < maxSpeed)
@@ -79,6 +94,13 @@ public class FrogBehaviour : MonoBehaviour
 
 		if(Mathf.Abs(rigidbody2D.velocity.x) > maxSpeed)
 			rigidbody2D.velocity = new Vector2(Mathf.Sign(rigidbody2D.velocity.x) * maxSpeed, rigidbody2D.velocity.y);
+		}
+
+		if (!pawnClose && !bishopClose) 
+		{
+			Destroy (cloneRightPike);
+			Destroy (cloneLeftPike);
+			pikePresent = false;
 		}
 	}
 
@@ -92,10 +114,13 @@ public class FrogBehaviour : MonoBehaviour
 		       {
 				  lastHitTime = Time.time; 
 			      health -= 20f;
+				  UpdateHealthBar();
 			   }
 			   else
 			   {
 				  health -=20f;
+				  Destroy (cloneHealthBar);
+				 // Destroy (cloneHealthBarOutline);
 				  StartCoroutine(Death());
 			   }
 			}
@@ -117,6 +142,7 @@ public class FrogBehaviour : MonoBehaviour
 		if (facingRight && attacking && !pikePresent) 
 		{
 			cloneRightPike = (GameObject) Instantiate (RightPikePrefab, PikeLoc.position, PikeLoc.rotation);
+			cloneRightPike.transform.parent = transform;
 			pikePresent = true;
 			attacking = false;
 		}
@@ -124,11 +150,12 @@ public class FrogBehaviour : MonoBehaviour
 		if (!facingRight && attacking &&!pikePresent) 
 		{
 			cloneLeftPike = (GameObject) Instantiate (LeftPikePrefab, PikeLoc.position, PikeLoc.rotation);
+			cloneLeftPike.transform.parent = transform;
 			pikePresent = true;
 			attacking = false;
 		}
 
-		if (!pawnClose) 
+		if (!pawnClose && !bishopClose) 
 		{
 			Destroy (cloneRightPike);
 			Destroy (cloneLeftPike);
@@ -145,7 +172,7 @@ public class FrogBehaviour : MonoBehaviour
 		Destroy (cloneRightPike);
 		Destroy (cloneLeftPike);
 		pikePresent = false;
-		this.gameObject.layer = 10;
+		this.gameObject.layer = 11;
 		if (!fell) 
 		{
 			this.transform.Rotate(0f, 0f, 90f);
@@ -156,6 +183,7 @@ public class FrogBehaviour : MonoBehaviour
 		this.gameObject.layer = oldLayer;
 		rigidbody2D.isKinematic = false;
 		health = 100f;
+		CreateHealthBar ();
 		if (fell) 
 		{
 			this.transform.Rotate(0f, 0f, -90f);
@@ -163,5 +191,27 @@ public class FrogBehaviour : MonoBehaviour
 			fell = false;
 		}
 		currentlyDead = false;
+	}
+
+	void CreateHealthBar()
+	{
+		cloneHealthBar = (GameObject) Instantiate (healthBarPrefab, healthBarLoc.position, healthBarLoc.rotation);
+		cloneHealthBar.transform.parent = transform;
+		//cloneHealthBarOutline = (GameObject) Instantiate (healthBarOutlinePrefab, healthBarLoc.position, healthBarLoc.rotation);
+		//cloneHealthBarOutline.transform.parent = transform;
+		healthBar = transform.Find ("cloneHealthBar(Clone)").GetComponent<SpriteRenderer> ();
+		healthScale = healthBar.transform.localScale;
+	}
+
+	void UpdateHealthBar ()
+	{
+
+		if (health > 50) 
+			healthBar.color = Color.Lerp (Color.green, Color.yellow, 1 - health * 0.01f);
+		else
+			healthBar.color = Color.Lerp (Color.yellow, Color.red, 1 - health * 0.01f);
+
+		// Set the scale of the health bar to be proportional to the player's health.
+		healthBar.transform.localScale = new Vector3(healthScale.x * health * 0.01f, healthScale.y, 1);
 	}
 }

@@ -212,7 +212,7 @@ GameObject:
   - 4: {fileID: 15250850}
   - 114: {fileID: 15250851}
   m_Layer: 0
-  m_Name: FrogSpawn
+  m_Name: FrogSpawn1
   m_TagString: Untagged
   m_Icon: {fileID: -1500306622, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -579,7 +579,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 115102292}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: resurrectLoc
   m_TagString: Untagged
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
@@ -814,11 +814,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: ce9a4a0c3e32e6140a98e0837dc8bbf5, type: 2}
       propertyPath: spawnDelay
-      value: 60
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: ce9a4a0c3e32e6140a98e0837dc8bbf5, type: 2}
       propertyPath: spawnTime
-      value: 60
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ce9a4a0c3e32e6140a98e0837dc8bbf5, type: 2}
+      propertyPath: m_Name
+      value: FrogSpawn3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9a4a0c3e32e6140a98e0837dc8bbf5, type: 2}
@@ -927,6 +931,10 @@ Prefab:
     - target: {fileID: 11400000, guid: ce9a4a0c3e32e6140a98e0837dc8bbf5, type: 2}
       propertyPath: spawnDelay
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ce9a4a0c3e32e6140a98e0837dc8bbf5, type: 2}
+      propertyPath: m_Name
+      value: FrogSpawn1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9a4a0c3e32e6140a98e0837dc8bbf5, type: 2}
@@ -1353,7 +1361,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 251752137}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: resurrectLoc
   m_TagString: Untagged
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
@@ -1371,6 +1379,68 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 483070682}
+--- !u!1 &254124713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 254124714}
+  - 132: {fileID: 254124715}
+  - 114: {fileID: 254124716}
+  m_Layer: 0
+  m_Name: HealthAmount
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &254124714
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254124713}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .870000005, y: 1.09000003, z: .0109863281}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1922537223}
+--- !u!132 &254124715
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254124713}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: 100
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: f5f2144dfbe809a418c4badd07475322, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 40
+  m_FontStyle: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!114 &254124716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254124713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b1e2c9c7360dcf43a49c1698b066f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &268783242
 Prefab:
   m_ObjectHideFlags: 0
@@ -1406,6 +1476,34 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: healthBarPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 13e768527d3beeb45b7dc98a2ef17915, type: 2}
+    - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: healthBarOutlinePrefab
+      value: 
+      objectReference: {fileID: 100000, guid: da17007e17034f3448573f96e94d2bf5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c667e153c19648340924780653c28131, type: 2}
   m_RootGameObject: {fileID: 483070681}
@@ -1452,7 +1550,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
       propertyPath: m_TagString
-      value: Pawn
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
       propertyPath: m_Layer
@@ -1524,7 +1622,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
       propertyPath: JumpForce
-      value: 450
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: d54230681b760ee4b9f13f3dde413103, type: 2}
       propertyPath: MaxSpeed
@@ -1543,7 +1641,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 295945978}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: bishopCheckBottom
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -2247,7 +2345,7 @@ GameObject:
   - 95: {fileID: 427164410}
   - 114: {fileID: 427164409}
   - 114: {fileID: 427164408}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Pawn
   m_TagString: Pawn
   m_Icon: {fileID: 0}
@@ -2261,7 +2359,7 @@ Transform:
   m_PrefabInternal: {fileID: 1950019391}
   m_GameObject: {fileID: 427164406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.68398333, y: -2.60143018, z: 0}
+  m_LocalPosition: {x: -5.6949873, y: -2.6234374, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 2025685094}
@@ -2319,8 +2417,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19562177218bff04190b0aa231f2f4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBarPrefab: {fileID: 100000, guid: 13e768527d3beeb45b7dc98a2ef17915, type: 2}
   facingRight: 0
-  PawnHealth: 0
+  setPawnHealth: 100
+  pawnCurrentHealth: 0
+  noPikeDamagePeriod: .5
   resurrectTime: 3
   ResurrectPrefab: {fileID: 100002, guid: fcb7f551bad726f45817a74532a4d27e, type: 2}
 --- !u!50 &427164412
@@ -2395,7 +2496,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 429034310}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: bishopCheckTop
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -2514,7 +2615,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 13c8bfd556130c845a550af42bef07c0, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13c8bfd556130c845a550af42bef07c0, type: 2}
@@ -2529,7 +2630,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 455829990}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: frogCheck
   m_TagString: Untagged
   m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
@@ -2555,7 +2656,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 457980280}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: resurrectLoc
   m_TagString: Untagged
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
@@ -2884,7 +2985,7 @@ GameObject:
   - 114: {fileID: 483070685}
   - 95: {fileID: 483070684}
   - 114: {fileID: 483070683}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Pawn
   m_TagString: Pawn
   m_Icon: {fileID: 0}
@@ -2945,8 +3046,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19562177218bff04190b0aa231f2f4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBarPrefab: {fileID: 100000, guid: 13e768527d3beeb45b7dc98a2ef17915, type: 2}
   facingRight: 0
-  PawnHealth: 0
+  setPawnHealth: 100
+  pawnCurrentHealth: 0
+  noPikeDamagePeriod: .5
   resurrectTime: 3
   ResurrectPrefab: {fileID: 100002, guid: fcb7f551bad726f45817a74532a4d27e, type: 2}
 --- !u!50 &483070686
@@ -3137,7 +3241,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 502214565}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: bishopCheckTop
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -3819,11 +3923,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: ce9a4a0c3e32e6140a98e0837dc8bbf5, type: 2}
       propertyPath: spawnDelay
-      value: 60
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: ce9a4a0c3e32e6140a98e0837dc8bbf5, type: 2}
       propertyPath: spawnTime
-      value: 60
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ce9a4a0c3e32e6140a98e0837dc8bbf5, type: 2}
+      propertyPath: m_Name
+      value: FrogSpawn4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9a4a0c3e32e6140a98e0837dc8bbf5, type: 2}
@@ -3902,7 +4010,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 650828222}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: bishopCheckBottom
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -3931,6 +4039,7 @@ GameObject:
   - 132: {fileID: 651191473}
   - 82: {fileID: 651191472}
   - 114: {fileID: 651191471}
+  - 114: {fileID: 651191475}
   m_Layer: 0
   m_Name: GlobalStuff
   m_TagString: Untagged
@@ -4039,9 +4148,20 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .5, y: .775326729, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 972126160}
+  m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &651191475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 651191470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e4a1fd6f9bce164099031968c1807b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frog: {fileID: 100000, guid: 293a6d80dbe095946b46c94b4f0c4fb2, type: 2}
 --- !u!1 &665080717
 GameObject:
   m_ObjectHideFlags: 0
@@ -4050,7 +4170,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 665080718}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: frogCheck
   m_TagString: Untagged
   m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
@@ -4352,7 +4472,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 793502915}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: frogCheck
   m_TagString: Untagged
   m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
@@ -4503,7 +4623,7 @@ GameObject:
   - 114: {fileID: 843819027}
   m_Layer: 9
   m_Name: Bishop
-  m_TagString: Pawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4596,7 +4716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e60410001df47b249ac421fd3b757b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 450
+  JumpForce: 550
   MaxSpeed: 6
   MoveForce: 200
 --- !u!95 &843819026
@@ -4621,11 +4741,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 843819019}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e80c5a120b7c48942b63181b02e5562c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a93d8da6c51dfe488da11d98f1a3e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerCurrentHealth: 20
-  PlayerTotalHealth: 100
+  BishopHealth: 100
+  BishopCurrentHealth: 0
+  noDamagePeriod: 2
+  noPikeDamagePeriod: .5
+  FadeTime: 5
+  FadeTexture: {fileID: 2800000, guid: aa190a7e931735549a4ffd89cc6127bb, type: 3}
 --- !u!1001 &853222950
 Prefab:
   m_ObjectHideFlags: 0
@@ -4922,52 +5046,6 @@ Prefab:
   m_RootGameObject: {fileID: 3484489}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &931381603
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 931381605}
-  - 131: {fileID: 931381604}
-  m_Layer: 0
-  m_Name: HealthBar
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!131 &931381604
-GUITexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 931381603}
-  m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: c708a4db51873f043b9eb973ba6b85e6, type: 3}
-  m_Color: {r: .5, g: .5, b: .5, a: .5}
-  m_PixelInset:
-    serializedVersion: 2
-    x: -64
-    y: -29
-    width: 128
-    height: 20
-  m_LeftBorder: 0
-  m_RightBorder: 0
-  m_TopBorder: 0
-  m_BottomBorder: 0
---- !u!4 &931381605
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 931381603}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .930000007, y: 1.07599998, z: .0109863281}
-  m_LocalScale: {x: 0, y: 0, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1922537223}
 --- !u!1001 &933165884
 Prefab:
   m_ObjectHideFlags: 0
@@ -5042,13 +5120,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 972126159}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.153001666, y: -3.16344666, z: -.0100097656}
+  m_LocalPosition: {x: .346998334, y: -2.38811994, z: -.0100097656}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1476538381}
   - {fileID: 1234415665}
   - {fileID: 620253171}
-  m_Father: {fileID: 651191474}
+  m_Father: {fileID: 0}
 --- !u!1001 &975417716
 Prefab:
   m_ObjectHideFlags: 0
@@ -5160,7 +5238,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1024818847}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: resurrectLoc
   m_TagString: Untagged
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
@@ -5186,7 +5264,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1041202254}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: bishopCheckBottom
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -5276,7 +5354,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1059066042}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: bishopCheckTop
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -5438,7 +5516,7 @@ GameObject:
   - 95: {fileID: 1078112210}
   - 114: {fileID: 1078112212}
   - 114: {fileID: 1078112211}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Pawn
   m_TagString: Pawn
   m_Icon: {fileID: 0}
@@ -5536,8 +5614,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19562177218bff04190b0aa231f2f4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBarPrefab: {fileID: 100000, guid: 13e768527d3beeb45b7dc98a2ef17915, type: 2}
   facingRight: 1
-  PawnHealth: 0
+  setPawnHealth: 100
+  pawnCurrentHealth: 0
+  noPikeDamagePeriod: .5
   resurrectTime: 3
   ResurrectPrefab: {fileID: 100002, guid: fcb7f551bad726f45817a74532a4d27e, type: 2}
 --- !u!95 &1078112210
@@ -5783,7 +5864,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1137081322}
   - 61: {fileID: 1137081323}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Blocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5939,13 +6020,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 639264376}
-  - {fileID: 2035952022}
-  - {fileID: 15250850}
-  - {fileID: 1570388879}
   - {fileID: 367461937}
-  - {fileID: 1356619155}
   - {fileID: 989327739}
   - {fileID: 333919195}
+  - {fileID: 15250850}
+  - {fileID: 1356619155}
+  - {fileID: 2035952022}
+  - {fileID: 1570388879}
   m_Father: {fileID: 0}
 --- !u!1 &1234415664
 GameObject:
@@ -6270,6 +6351,10 @@ Prefab:
       propertyPath: spawnTime
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ce9a4a0c3e32e6140a98e0837dc8bbf5, type: 2}
+      propertyPath: m_Name
+      value: FrogSpawn2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9a4a0c3e32e6140a98e0837dc8bbf5, type: 2}
   m_RootGameObject: {fileID: 1356619154}
@@ -6401,7 +6486,7 @@ GameObject:
   - 4: {fileID: 1356619155}
   - 114: {fileID: 1356619156}
   m_Layer: 0
-  m_Name: FrogSpawn
+  m_Name: FrogSpawn2
   m_TagString: Untagged
   m_Icon: {fileID: -1500306622, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -6636,7 +6721,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1447809153}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: frogCheck
   m_TagString: Untagged
   m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
@@ -7139,7 +7224,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 13c8bfd556130c845a550af42bef07c0, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13c8bfd556130c845a550af42bef07c0, type: 2}
@@ -7222,7 +7307,7 @@ GUIText:
   m_GameObject: {fileID: 1549746378}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Health
+  m_Text: 'Health:'
   m_Anchor: 0
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
@@ -7438,7 +7523,7 @@ GameObject:
   - 4: {fileID: 1570388879}
   - 114: {fileID: 1570388880}
   m_Layer: 0
-  m_Name: FrogSpawn
+  m_Name: FrogSpawn4
   m_TagString: Untagged
   m_Icon: {fileID: -1500306622, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -7467,8 +7552,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6308cc28d0946042a4957c767f4bd43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 60
-  spawnDelay: 60
+  spawnTime: 20
+  spawnDelay: 40
   frog: {fileID: 100000, guid: 293a6d80dbe095946b46c94b4f0c4fb2, type: 2}
 --- !u!1 &1588207240
 GameObject:
@@ -8583,6 +8668,34 @@ Prefab:
       propertyPath: facingRight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: healthBarOutlinePrefab
+      value: 
+      objectReference: {fileID: 100000, guid: da17007e17034f3448573f96e94d2bf5, type: 2}
+    - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: healthBarPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 13e768527d3beeb45b7dc98a2ef17915, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c667e153c19648340924780653c28131, type: 2}
   m_RootGameObject: {fileID: 1968457975}
@@ -8614,7 +8727,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1549746380}
-  - {fileID: 931381605}
+  - {fileID: 254124714}
   - {fileID: 1744186306}
   m_Father: {fileID: 0}
 --- !u!1001 &1950019391
@@ -8626,11 +8739,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.68398333
+      value: -5.6949873
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.60143018
+      value: -2.6234374
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8677,6 +8790,34 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: healthBarPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 13e768527d3beeb45b7dc98a2ef17915, type: 2}
+    - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: healthBarOutlinePrefab
+      value: 
+      objectReference: {fileID: 100000, guid: da17007e17034f3448573f96e94d2bf5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c667e153c19648340924780653c28131, type: 2}
   m_RootGameObject: {fileID: 427164406}
@@ -8697,7 +8838,7 @@ GameObject:
   - 114: {fileID: 1968457981}
   - 95: {fileID: 1968457982}
   - 114: {fileID: 1968457983}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Pawn
   m_TagString: Pawn
   m_Icon: {fileID: 0}
@@ -8795,8 +8936,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19562177218bff04190b0aa231f2f4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBarPrefab: {fileID: 100000, guid: 13e768527d3beeb45b7dc98a2ef17915, type: 2}
   facingRight: 1
-  PawnHealth: 0
+  setPawnHealth: 100
+  pawnCurrentHealth: 0
+  noPikeDamagePeriod: .5
   resurrectTime: 3
   ResurrectPrefab: {fileID: 100002, guid: fcb7f551bad726f45817a74532a4d27e, type: 2}
 --- !u!95 &1968457982
@@ -9026,7 +9170,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2025685094}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: bishopCheckBottom
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -9210,7 +9354,7 @@ GameObject:
   - 4: {fileID: 2035952022}
   - 114: {fileID: 2035952023}
   m_Layer: 0
-  m_Name: FrogSpawn
+  m_Name: FrogSpawn3
   m_TagString: Untagged
   m_Icon: {fileID: -1500306622, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -9239,8 +9383,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6308cc28d0946042a4957c767f4bd43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 60
-  spawnDelay: 60
+  spawnTime: 40
+  spawnDelay: 40
   frog: {fileID: 100000, guid: 293a6d80dbe095946b46c94b4f0c4fb2, type: 2}
 --- !u!1001 &2057421684
 Prefab:
@@ -9410,6 +9554,34 @@ Prefab:
       propertyPath: facingRight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: healthBarPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 13e768527d3beeb45b7dc98a2ef17915, type: 2}
+    - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
+      propertyPath: healthBarOutlinePrefab
+      value: 
+      objectReference: {fileID: 100000, guid: da17007e17034f3448573f96e94d2bf5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c667e153c19648340924780653c28131, type: 2}
   m_RootGameObject: {fileID: 1078112203}
@@ -9540,7 +9712,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2144558369}
   - 61: {fileID: 2144558368}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Blocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9578,7 +9750,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2147269366}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: bishopCheckTop
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}

@@ -3,8 +3,17 @@ using System.Collections;
 
 public class PawnResurrection : MonoBehaviour
 {
+	public GameObject healthBarPrefab;
+	//public GameObject healthBarOutlinePrefab;
+	private GameObject cloneHealthBar;
+	//private GameObject cloneHealthBarOutline;
+
 	public bool facingRight;
-	public float PawnHealth = 0f;
+	public float setPawnHealth = 100f;
+	public float pawnCurrentHealth;
+
+	private float lastPikeHitTime;
+	public float noPikeDamagePeriod = 0.5f;
 
 	public float resurrectTime = 3f;
 	private float resurrectTimeToGo;
@@ -28,6 +37,9 @@ public class PawnResurrection : MonoBehaviour
 	private int noCollisionLayer;
 	private int oldLayer;
 
+	private SpriteRenderer healthBar;
+	private Vector3 healthScale;	
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -50,14 +62,14 @@ public class PawnResurrection : MonoBehaviour
 		if (carried) 
 		{
 			rigidbody2D.isKinematic = true;
-			this.gameObject.layer = 10;
+			this.gameObject.layer = 11;
 			transform.position = new Vector3 (player.transform.position.x, player.transform.position.y + player.transform.lossyScale.y / 2);
 		}
 
 		if (!pawnAlive)
 		{
 		    rigidbody2D.isKinematic = true;
-		    this.gameObject.layer = 10;
+		    this.gameObject.layer = 11;
 		}
 		else if (!carried)
 		{
@@ -103,6 +115,27 @@ public class PawnResurrection : MonoBehaviour
 
 	}
 
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		if (col.gameObject.tag == "Pike") 
+		{
+			  if (pawnCurrentHealth > 1f) 	
+				{
+				  pawnCurrentHealth -= 0.1f;
+				  UpdateHealthBar();
+				}
+				else 
+				{
+				   pawnCurrentHealth -= 1f;
+				   Destroy (cloneHealthBar);
+				   //Destroy (cloneHealthBarOutline);
+				   PawnDeath ();
+				}
+				
+		 }
+	    
+	}
+
 	void Resurrect()
 	{
 		rigidbody2D.isKinematic = false;
@@ -110,7 +143,38 @@ public class PawnResurrection : MonoBehaviour
 		pawnAlive = true;
 		resurrecting = false;
 		Destroy (cloneResurrect);
-		PawnHealth = 100f;
+		pawnCurrentHealth = setPawnHealth;
+
+		cloneHealthBar = (GameObject) Instantiate (healthBarPrefab, resurrectLoc.position, resurrectLoc.rotation);
+		cloneHealthBar.transform.parent = transform;
+		//cloneHealthBarOutline = (GameObject) Instantiate (healthBarOutlinePrefab, resurrectLoc.position, resurrectLoc.rotation);
+		//cloneHealthBarOutline.transform.parent = transform;
+
+		healthBar = transform.Find ("cloneHealthBar(Clone)").GetComponent<SpriteRenderer> ();
+		healthScale = healthBar.transform.localScale;
+	}
+
+	void PawnDeath()
+	{
+		this.gameObject.layer = 11;
+		rigidbody2D.isKinematic = true;
+		resurrectTimeToGo = resurrectTime;
+		pawnAlive = false;
+		resurrecting = false;
+		Destroy (cloneResurrect);
+		pawnCurrentHealth = 0f;
+	}
+
+	public void UpdateHealthBar ()
+	{
+
+		if (pawnCurrentHealth > 50) 
+			healthBar.color = Color.Lerp (Color.green, Color.yellow, 1 - pawnCurrentHealth * 0.01f);
+		else
+			healthBar.color = Color.Lerp (Color.yellow, Color.red, 1 - pawnCurrentHealth * 0.01f);
+		
+		// Set the scale of the health bar to be proportional to the player's health.
+		healthBar.transform.localScale = new Vector3(healthScale.x * pawnCurrentHealth * 0.01f, healthScale.y, 1);
 	}
 
 	void Flip ()
@@ -120,3 +184,4 @@ public class PawnResurrection : MonoBehaviour
 		transform.localScale = theScale;
 	}
 }
+
