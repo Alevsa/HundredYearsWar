@@ -27,7 +27,7 @@ public class PawnAttack : MonoBehaviour
 
 		FrogPresent = Physics2D.Linecast (transform.position, FrogCheck.position, 1<< LayerMask.NameToLayer ("Enemy"));
 
-		if (FrogPresent && (this.gameObject.layer == 12)) {
+		if (FrogPresent && (this.gameObject.layer == 11)) {
 						if (pawnRes.facingRight == true)
 								attack = true;
 						else

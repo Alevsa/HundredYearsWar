@@ -5,7 +5,8 @@ public class FrogSpawner : MonoBehaviour
 {
 	public float spawnTime = 50f;		// The amount of time between each spawn.
 	public float spawnDelay = 20f;		// The amount of time before spawning starts.
-	public GameObject frog;			
+	public GameObject frog;	
+	public bool spawn = true;
 	
 	void Start ()
 	{
@@ -15,6 +16,7 @@ public class FrogSpawner : MonoBehaviour
 
 	void Spawn ()
 	{
+		if(spawn)
 		Instantiate(frog, transform.position, transform.rotation);
 	}
 

@@ -55,6 +55,10 @@ public class RandomFrogSpawn : MonoBehaviour
 		frogSpawner2.enabled = false;
 		frogSpawner3.enabled = false;
 		frogSpawner4.enabled = false;
+		frogSpawner1.spawn = false;
+		frogSpawner2.spawn = false;
+		frogSpawner3.spawn = false;
+		frogSpawner4.spawn = false;
 		yield return new WaitForSeconds (30f);
 		i = Random.Range (1, 4);
 		SpawnFrogAtLocation(i);
@@ -78,20 +82,11 @@ public class RandomFrogSpawn : MonoBehaviour
 		yield return new WaitForSeconds (30f);
 		i = Random.Range (1, 4);
 		SpawnFrogAtLocation(i);
-		yield return new WaitForSeconds (1f);
-		i = Random.Range (1, 4);
-		SpawnFrogAtLocation(i);
 		yield return new WaitForSeconds (30f);
 		i = Random.Range (1, 4);
 		SpawnFrogAtLocation(i);
 		yield return new WaitForSeconds (1f);
 		SpawnFrogAtLocation(i);
-		yield return new WaitForSeconds (1f);
-		SpawnFrogAtLocation(i);
-		yield return new WaitForSeconds (1f);
-		i = Random.Range (1, 4);
-		SpawnFrogAtLocation(i);
-	
 	}
 
 	void SpawnFrogAtLocation(int location)

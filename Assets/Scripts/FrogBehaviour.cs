@@ -49,6 +49,8 @@ public class FrogBehaviour : MonoBehaviour
 	private SpriteRenderer healthBar;
 	private Vector3 healthScale;
 
+	private bool Respawned = false;
+
 	void Start () 
 	{
 		PikeLoc = transform.Find ("PikeLoc");
@@ -172,25 +174,25 @@ public class FrogBehaviour : MonoBehaviour
 		Destroy (cloneRightPike);
 		Destroy (cloneLeftPike);
 		pikePresent = false;
-		this.gameObject.layer = 11;
-		if (!fell) 
-		{
-			this.transform.Rotate(0f, 0f, 90f);
-			this.transform.position += new Vector3(0f, -0.5f, 0f);
-			fell = true;
-		}
-		yield return new WaitForSeconds(deathDuration);
-		this.gameObject.layer = oldLayer;
-		rigidbody2D.isKinematic = false;
-		health = 100f;
-		CreateHealthBar ();
-		if (fell) 
-		{
-			this.transform.Rotate(0f, 0f, -90f);
-			this.transform.position += new Vector3(0f, 0.5f, 0f);
-			fell = false;
-		}
-		currentlyDead = false;
+		this.gameObject.layer = 12;
+		if (!Respawned) {
+						if (!fell) {
+								this.transform.Rotate (0f, 0f, 90f);
+								this.transform.position += new Vector3 (0f, -0.5f, 0f);
+								fell = true;
+						}
+						yield return new WaitForSeconds (deathDuration);
+						this.gameObject.layer = oldLayer;
+						rigidbody2D.isKinematic = false;
+						health = 100f;
+						CreateHealthBar ();
+						if (fell) {
+								this.transform.Rotate (0f, 0f, -90f);
+								this.transform.position += new Vector3 (0f, 0.5f, 0f);
+								fell = false;
+						}
+						currentlyDead = false;
+				}
 	}
 
 	void CreateHealthBar()

@@ -19,8 +19,8 @@ TagManager:
   User Layer 8: Ground
   User Layer 9: Player
   User Layer 10: Enemy
-  User Layer 11: NoCollision
-  User Layer 12: Ally
+  User Layer 11: Ally
+  User Layer 12: NoCollision
   User Layer 13: Blocker
   User Layer 14: 
   User Layer 15: 

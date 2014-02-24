@@ -62,14 +62,14 @@ public class PawnResurrection : MonoBehaviour
 		if (carried) 
 		{
 			rigidbody2D.isKinematic = true;
-			this.gameObject.layer = 11;
+			this.gameObject.layer = 12;
 			transform.position = new Vector3 (player.transform.position.x, player.transform.position.y + player.transform.lossyScale.y / 2);
 		}
 
 		if (!pawnAlive)
 		{
 		    rigidbody2D.isKinematic = true;
-		    this.gameObject.layer = 11;
+		    this.gameObject.layer = 12;
 		}
 		else if (!carried)
 		{
@@ -156,7 +156,7 @@ public class PawnResurrection : MonoBehaviour
 
 	void PawnDeath()
 	{
-		this.gameObject.layer = 11;
+		this.gameObject.layer = 12;
 		rigidbody2D.isKinematic = true;
 		resurrectTimeToGo = resurrectTime;
 		pawnAlive = false;

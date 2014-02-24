@@ -244,6 +244,7 @@ MonoBehaviour:
   spawnTime: 40
   spawnDelay: 20
   frog: {fileID: 100000, guid: 293a6d80dbe095946b46c94b4f0c4fb2, type: 2}
+  spawn: 1
 --- !u!1 &27134455
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +580,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 115102292}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: resurrectLoc
   m_TagString: Untagged
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
@@ -1361,7 +1362,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 251752137}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: resurrectLoc
   m_TagString: Untagged
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
@@ -1478,23 +1479,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: healthBarPrefab
@@ -1641,7 +1642,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 295945978}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: bishopCheckBottom
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -2345,7 +2346,7 @@ GameObject:
   - 95: {fileID: 427164410}
   - 114: {fileID: 427164409}
   - 114: {fileID: 427164408}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Pawn
   m_TagString: Pawn
   m_Icon: {fileID: 0}
@@ -2496,7 +2497,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 429034310}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: bishopCheckTop
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -2630,7 +2631,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 455829990}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: frogCheck
   m_TagString: Untagged
   m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
@@ -2656,7 +2657,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 457980280}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: resurrectLoc
   m_TagString: Untagged
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
@@ -2985,7 +2986,7 @@ GameObject:
   - 114: {fileID: 483070685}
   - 95: {fileID: 483070684}
   - 114: {fileID: 483070683}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Pawn
   m_TagString: Pawn
   m_Icon: {fileID: 0}
@@ -3241,7 +3242,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 502214565}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: bishopCheckTop
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -4010,7 +4011,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 650828222}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: bishopCheckBottom
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -4170,7 +4171,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 665080718}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: frogCheck
   m_TagString: Untagged
   m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
@@ -4472,7 +4473,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 793502915}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: frogCheck
   m_TagString: Untagged
   m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
@@ -5238,7 +5239,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1024818847}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: resurrectLoc
   m_TagString: Untagged
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
@@ -5264,7 +5265,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1041202254}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: bishopCheckBottom
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -5354,7 +5355,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1059066042}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: bishopCheckTop
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -5516,7 +5517,7 @@ GameObject:
   - 95: {fileID: 1078112210}
   - 114: {fileID: 1078112212}
   - 114: {fileID: 1078112211}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Pawn
   m_TagString: Pawn
   m_Icon: {fileID: 0}
@@ -6518,6 +6519,7 @@ MonoBehaviour:
   spawnTime: 40
   spawnDelay: 20
   frog: {fileID: 100000, guid: 293a6d80dbe095946b46c94b4f0c4fb2, type: 2}
+  spawn: 1
 --- !u!1 &1361646841
 GameObject:
   m_ObjectHideFlags: 0
@@ -6721,7 +6723,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1447809153}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: frogCheck
   m_TagString: Untagged
   m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
@@ -7555,6 +7557,7 @@ MonoBehaviour:
   spawnTime: 20
   spawnDelay: 40
   frog: {fileID: 100000, guid: 293a6d80dbe095946b46c94b4f0c4fb2, type: 2}
+  spawn: 1
 --- !u!1 &1588207240
 GameObject:
   m_ObjectHideFlags: 0
@@ -8670,23 +8673,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: healthBarOutlinePrefab
@@ -8792,23 +8795,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: healthBarPrefab
@@ -8838,7 +8841,7 @@ GameObject:
   - 114: {fileID: 1968457981}
   - 95: {fileID: 1968457982}
   - 114: {fileID: 1968457983}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Pawn
   m_TagString: Pawn
   m_Icon: {fileID: 0}
@@ -9170,7 +9173,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2025685094}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: bishopCheckBottom
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
@@ -9386,6 +9389,7 @@ MonoBehaviour:
   spawnTime: 40
   spawnDelay: 40
   frog: {fileID: 100000, guid: 293a6d80dbe095946b46c94b4f0c4fb2, type: 2}
+  spawn: 1
 --- !u!1001 &2057421684
 Prefab:
   m_ObjectHideFlags: 0
@@ -9556,23 +9560,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: c667e153c19648340924780653c28131, type: 2}
       propertyPath: healthBarPrefab
@@ -9750,7 +9754,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2147269366}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: bishopCheckTop
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
