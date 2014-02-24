@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869e4b6cb1fb5d044a01f3a06f98fe84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstText: ' Forsooth! Verily and yea,'
+  firstText: Forsooth! Verily and yea,
   secondText: Thine castle be under siege from
   thirdText: the most vile and perfidious French!
   fourthText: O Bishop most noble,
