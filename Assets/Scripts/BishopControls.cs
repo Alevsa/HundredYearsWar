@@ -5,7 +5,8 @@ public class BishopControls : MonoBehaviour
 	
 {
 
-	//ALEX IS A SOMETHING ELSE
+	//ALEX IS A SOMETHING ELSE PS3SUX
+
 	public float JumpForce = 300f;
 	public float MaxSpeed = 3f;
 	public float MoveForce = 20f;
