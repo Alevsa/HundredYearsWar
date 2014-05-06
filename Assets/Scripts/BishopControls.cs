@@ -5,7 +5,7 @@ public class BishopControls : MonoBehaviour
 	
 {
 
-	//ALEX IS A MASSIVE GAYLORD FUCKER
+	//ALEX IS A PS3Sux
 	public float JumpForce = 600f;
 	public float MaxSpeed = 3f;
 	public float MoveForce = 200f;
